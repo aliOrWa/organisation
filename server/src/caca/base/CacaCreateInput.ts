@@ -1,0 +1,2 @@
+class CacaCreateInput {}
+export { CacaCreateInput };

@@ -1,0 +1,43 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  firstName String?
+  lastName  String?
+  username  String   @unique
+  password  String
+  roles     String[]
+}
+
+model User2 {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  ouisssema String?
+  sousou    String?
+  dfazdaz   String?
+}
+
+model User3 {
+  createdAt    DateTime @default(now())
+  ahmed        String?
+  cadzdcazcdza String?
+  dazdzadaz    String?
+  id           String   @id @default(cuid())
+  updatedAt    DateTime @updatedAt
+}
+
+model Caca {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

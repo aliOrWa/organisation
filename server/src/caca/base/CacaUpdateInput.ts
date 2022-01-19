@@ -1,0 +1,2 @@
+class CacaUpdateInput {}
+export { CacaUpdateInput };
